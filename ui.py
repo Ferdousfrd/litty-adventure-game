@@ -28,3 +28,8 @@ def welcomeScreen():
     print("              2. GangBang adventure (Squad Goals) 🎉   ")
 
     print("\n" * 2)
+
+# make sure player has the game pacing
+def wait_for_player():
+    """Pause and wait for player to press any key"""
+    input("\n[Press Enter to continue...]")

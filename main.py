@@ -1,7 +1,6 @@
 # a drinking game with mystery and adventure to enjoy with friends 
 
 import os
-import time
 
 from ui import welcomeScreen
 from gameModes import gameModeSelect
