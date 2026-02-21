@@ -2,18 +2,17 @@
 
 import os
 
-from ui import welcomeScreen
+from ui import welcomeScreen, play_background_music
 from gameModes import gameModeSelect
+
 
 os.system('clear')  # will clear the screen or terminal first
 
 
 def main():
     welcomeScreen()
+    play_background_music()
     gameModeSelect()
-
-    
-
 
 
 

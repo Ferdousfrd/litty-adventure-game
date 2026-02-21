@@ -1,6 +1,7 @@
 # this file contains all the ui related functions
 
-import time
+import time, pygame
+
 
 # slow print for dramatic effect
 def slow_print(text, delay=0.05):
@@ -33,3 +34,25 @@ def welcomeScreen():
 def wait_for_player():
     """Pause and wait for player to press any key"""
     input("\n[Press Enter to continue...]")
+
+
+# initialize music system
+pygame.mixer.init()
+
+
+def play_background_music():
+    """Start playing background music on loop"""
+    try:
+        pygame.mixer.music.load('spooky.mp3')
+        pygame.mixer.music.set_volume(0.3)  # 30% volume (not too loud)
+        pygame.mixer.music.play(-1)  # -1 means loop forever
+    except:
+        pass  # if music file not found, game still works
+
+
+def stop_music():
+    """Stop the background music"""
+    try:
+        pygame.mixer.music.stop()
+    except:
+        pass
